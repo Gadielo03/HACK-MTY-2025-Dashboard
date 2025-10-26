@@ -1,13 +1,19 @@
 import { Bell, Settings, Calendar } from 'lucide-react';
 
 export function Header() {
+  const currentDate = new Date().toLocaleDateString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+  });
+
   return (
     <header className="bg-white border-b border-gray-200 px-8 py-4">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
           <button className="px-4 py-2 bg-blue-50 text-blue-600 rounded-lg text-sm font-medium flex items-center gap-2">
             <Calendar size={16} />
-            Oct 22, 2025
+            {currentDate}
           </button>
         </div>
 
@@ -16,7 +22,7 @@ export function Header() {
             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
             <span className="font-medium">Mobile App Connected</span>
           </div>
-          
+
           <button className="p-2 hover:bg-gray-100 rounded-lg relative">
             <Bell size={20} className="text-gray-600" />
             <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
