@@ -1,7 +1,7 @@
 import type { User, UserRule } from '../types/user';
 
 export class UserService {
-  private API_URL = import.meta.env.API_URL || 'http://localhost:8080';
+  private API_URL = import.meta.env.VITE_API_URL || 'http://18.216.25.43:8080';
 
   public async getAllUsers(): Promise<User[]> {
     try {
