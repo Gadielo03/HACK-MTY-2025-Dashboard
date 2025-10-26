@@ -7,7 +7,6 @@ import {
   CreditCard as Wallet,
   Settings,
   TrendingUp,
-  TestTube,
 } from 'lucide-react';
 import type { KPI, Transaction, Device, SavingsGoal } from '../types';
 
@@ -141,6 +140,5 @@ export const menuItems = [
   { id: 'autosaver', icon: PiggyBank, label: 'Auto-Saver' },
   { id: 'cards', icon: CreditCard, label: 'Cards' },
   { id: 'analytics', icon: TrendingUp, label: 'Analytics' },
-  { id: 'test', icon: TestTube, label: 'Test API' },
   { id: 'settings', icon: Settings, label: 'Settings' },
 ];
